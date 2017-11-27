@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+ <view>
+   <image src='{{avatarUrl}}'></image>
+   </view>
+ <view>
+ 姓名
+ </view>
+  <view class="section">
+  <input bindinput='nameInput' placeholder="请输入姓名"/>
+</view>
+   <view>
+ 手机号码
+ </view>
+  <view class="section">
+  <input bindinput='mobileInput' placeholder="请输入手机号码" />
+</view>
+   <view>
+   <button bindtap="setPlain">报名</button>
+   </view>
+    
+</view>
