@@ -8,5 +8,18 @@
 	},
 	"appid": "wxb0dfcf830569ed87",
 	"projectname": "sdh",
-	"condition": {}
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": []
+		}
+	}
 }

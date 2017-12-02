@@ -20,7 +20,10 @@ var config = {
         tunnelUrl: `${host}/weapp/tunnel`,
 
         // 上传图片接口
-        uploadUrl: `${host}/weapp/upload`
+        uploadUrl: `${host}/weapp/upload`,
+
+          // 插入信息
+        insert: `${host}/weapp/insertPerson`
     },
 };
 

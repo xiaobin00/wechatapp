@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
  <view>
-   <image src='{{avatarUrl}}'></image>
+   <image class="userinfo-avatar" src='{{userInfo.avatarUrl}}'></image>
    </view>
  <view>
  姓名

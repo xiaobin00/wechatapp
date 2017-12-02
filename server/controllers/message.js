@@ -1,5 +1,5 @@
 const { message: { checkSignature } } = require('../qcloud')
-
+const { mysql } = require('../qcloud')
 /**
  * 响应 GET 请求（响应微信配置时的签名检查请求）
  */
@@ -23,7 +23,19 @@ async function post (ctx, next) {
     ctx.body = 'success'
 }
 
+async function insert(ctx,next){
+  var name = ctx.query.name;
+  var mobile = ctx.query.mobile; 
+  mysql('test').insert({ name: name, phone: mobile, status: 1, activity_id: 1}).returning('*')   .then(res => {
+      console.log(res)
+    })
+  ctx.body = mysql('test').select('name').where({ id: 1 }).then(function (productRow) {
+    return productRow;
+  })
+}
+
 module.exports = {
     post,
+    insert,
     get
 }

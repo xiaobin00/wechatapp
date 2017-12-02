@@ -4,16 +4,31 @@ var config = require('./config')
 var util = require('./utils/util.js')
 App({
   globalData: {
-    nickName:"",
-    avatarUrl: "",
-    gender: "",
-    province: "",
-    city: "",
-    country: ""
+   userInfo:null
   },
   onLaunch: function () {
       var that = this;
-        qcloud.setLoginUrl(config.service.loginUrl)
+      qcloud.setLoginUrl(config.service.loginUrl)
+      wx.login({
+        success:res =>{
+          // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        }
+      })
+      wx.getSetting({
+        success:res =>{
+          if(res.authSetting['scope.userInfo']){
+            wx.getUserInfo({
+              success:res =>{
+                this.globalData.userInfo = res.userInfo
+                if (this.userInfoReadyCallback){
+                  this.userInfoReadyCallback(res)
+                }
+              }
+            })
+          }
+        }
+      })
+
       
     },
 })
