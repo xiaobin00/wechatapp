@@ -26,7 +26,8 @@ async function post (ctx, next) {
 async function insert(ctx,next){
   var name = ctx.query.name;
   var mobile = ctx.query.mobile; 
-  mysql('test').insert({ name: name, phone: mobile, status: 1, activity_id: 1}).returning('*')   .then(res => {
+  var openId = ctx.query.openId; 
+  mysql('test').insert({ name: name, phone: mobile, open_id:openId,status: 1, activity_id: 1}).returning('*')   .then(res => {
       console.log(res)
     })
   ctx.body = mysql('test').select('name').where({ id: 1 }).then(function (productRow) {

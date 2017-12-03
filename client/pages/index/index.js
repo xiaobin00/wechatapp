@@ -38,18 +38,26 @@ Page({
         this.mobile= e.detail.value
     },
   setPlain:function(){
-   
-    wx.request({
+   wx.request({
       url: 'https://3a0dq3as.qcloud.la/weapp/insertPerson',
       data: {
         name: this.name,
-        mobile: this.mobile
+        mobile: this.mobile,
+        openId: app.globalData.userInfo.openId
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success:function(res){
+        console.log(res);
+        util.showSuccess("报名成功")
       }
     })
+  },
+
+  toPoker:function (){
+      wx.navigateTo({
+        url: '../poker/poker'
+      })
   }
 })

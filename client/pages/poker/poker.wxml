@@ -1,0 +1,27 @@
+<!--pages/poker/poker.wxml-->
+<view>
+<view class='other'></view>
+<view class='oneself'>
+<image src='../image/fangpian3.gif' class='out-poker'  ></image>
+</view>
+<view class='oneself'>
+<image src='../image/caohua1.gif' class='img1'></image>
+<image src='../image/caohua2.gif' class='img'></image>
+<image src='../image/caohua3.gif' class='img'></image>
+<image src='../image/caohua4.gif' class='img'></image>
+<image src='../image/caohua5.gif' class='img'></image>
+<image src='../image/caohua6.gif' class='img'></image>
+<image src='../image/caohua7.gif' class='img'></image>
+<image src='../image/caohua8.gif' class='img'></image>
+<image src='../image/caohua9.gif' class='img'></image>
+<image src='../image/caohua10.gif' class='img'></image>
+<image src='../image/caohua11.gif' class='img'></image>
+<image src='../image/caohua12.gif' class='img'></image>
+<image src='../image/caohua13.gif' class='img'></image>
+<image src='../image/fangpian1.gif' class='img'></image>
+<image src='../image/fangpian2.gif' class='img'></image>
+<image src='../image/fangpian3.gif' class='img'></image>
+<image src='../image/fangpian4.gif' class='img'></image>
+<image src='../image/fangpian5.gif' class='img'></image>
+</view>
+</view>

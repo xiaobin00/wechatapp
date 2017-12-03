@@ -17,6 +17,7 @@
 </view>
    <view>
    <button bindtap="setPlain">报名</button>
+   <button bindtap="toPoker">poker</button>
    </view>
     
 </view>
